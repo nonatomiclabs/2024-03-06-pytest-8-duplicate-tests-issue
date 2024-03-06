@@ -38,7 +38,7 @@ With Pytest 8, we get only one:
 
 ```plain
 ============================= test session starts ==============================
-platform linux -- Python 3.12.2, pytest-8.0.0, pluggy-1.4.0
+platform linux -- Python 3.12.2, pytest-8.0.2, pluggy-1.4.0
 rootdir: /home
 collected 1 item
 
@@ -62,9 +62,9 @@ This repo provides a Dockerfile that can be used to reproduce the issue:
 
 - for Pytest 7:
     ```bash
-    > docker run --rm $(docker build -q --build-arg PYTEST_MAJOR_VERSION=7 .)
+    > docker run --rm $(docker build -q --build-arg PYTEST_VERSION=7 .)
     ```
 - for Pytest 8:
     ```bash
-    docker run --rm $(docker build -q --build-arg PYTEST_MAJOR_VERSION=8 .)
+    docker run --rm $(docker build -q --build-arg PYTEST_VERSION=8.0.2 .)
     ```
